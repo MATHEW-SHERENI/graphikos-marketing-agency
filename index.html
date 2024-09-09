@@ -51,18 +51,39 @@
             width: 100%;
             bottom: 0;
         }
-        
-      .slideshow-container {
-            position: relative;
+    slideshow-container {
             max-width: 100%;
+            position: relative;
             margin: auto;
         }
-       
         .slides {
             display: none;
             width: 100%;
+            height: 300px;
             background-size: cover;
             background-position: center;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
         }
         .social-media a {
             margin: 0 10px;
@@ -99,19 +120,14 @@
     <a href="#contact">Contact</a>
     <a href="#quotation">Quotation</a>
 </nav>
+div class="slideshow-container">
+    <div class="slides" style="background-image: url('IMG5.jpeg');"></div>
+    <div class="slides" style="background-image: url('IMG6.jpeg');"></div>
+    <div class="slides" style="background-image: url('IMG7.jpeg');"></div>
 
-<div class="container">
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="slideshow-container">
-            <div class="slides" style="background-image: url('IMG5.jpeg');"></div>
-            <div class="slides" style="background-image: url('IMG6.jpeg');"></div>
-            <div class="slides" style="background-image: url('IMG7.jpeg');"></div>
-            <div class="slides" style="background-image: url('IMG1.jpeg');"></div>
-            <div class="slides" style="background-image: url('IMG2.jpeg');"></div>
-            <div class="slides" style="background-image: url('IMG3.jpeg');"></div>
-        </div>
-    </section>
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
 
     <section id="products" class="products">
         <h2>Our Products</h2>
@@ -148,20 +164,26 @@
 <footer>
     <p>&copy; 2024 Graphikos Marketing Agents. All rights reserved.</p>
 </footer>
-
 <script>
     let slideIndex = 0;
     showSlides();
 
     function showSlides() {
-        let slides = document.getElementsByClassName("slides");
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
+        let slides = document.querySelectorAll(".slides");
+        slides.forEach(slide => slide.style.display = "none");
         slideIndex++;
         if (slideIndex > slides.length) { slideIndex = 1 }
         slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 8000); // Change image every 8 seconds
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+
+    function changeSlide(n) {
+        slideIndex += n - 1;
+        let slides = document.querySelectorAll(".slides");
+        slides.forEach(slide => slide.style.display = "none");
+        if (slideIndex >= slides.length) { slideIndex = 0 }
+        if (slideIndex < 0) { slideIndex = slides.length - 1 }
+        slides[slideIndex].style.display = "block";
     }
 </script>
 
