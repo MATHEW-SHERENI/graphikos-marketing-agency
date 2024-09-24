@@ -42,42 +42,18 @@
             margin-bottom: 40px;
              text-align: center;
         }
+      #slider {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+}
+.slide {
+  width: 600px;
+  height: 400px;
+  float: left;
+}  
+    
         
-    slideshow-container {
-            max-width: 100%;
-              height: 100px;
-            position: relative;
-            margin: auto;
-        }
-        .slides {
-            display: none;
-            width: 100%;
-            height: 100px;
-            background-size: cover;
-            background-position: center;
-        }
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            margin-top: -22px;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
-        }
         .social-media a {
             margin: 0 10px;
             color: Blue;
@@ -277,13 +253,15 @@ a:hover {
     <a href="#contact">Contact</a>
     <a href="#contact">Quotation</a>
 </nav>
-<div class="slideshow-container">
-    <div class="slides" style="background-image: url('img2.png');"></div>
-    <div class="slides" style="background-image: url('img3.png');"></div>
-    <div class="slides" style="background-image: url('img4.png');"></div>
+<div id="slider">
+  <div class="slide"><img src="img2.png" alt=""></div>
+  <div class="slide"><img src="img3.png" alt=""></div>
+     <div class="slide"><img src="img4.png" alt=""></div>
+  <div class="slide"><img src="img5.png" alt=""></div>
+  <!-- Add more slides as needed -->
 
-    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    <a class="prev" onclick="changeSlides(-1)">❮</a>
+<a class="next" onclick="changeSlides(1)">❯</a
 </div>
 
     <section id="products" class="products">
@@ -386,26 +364,25 @@ a:hover {
         &copy; 2024 Graphikos Marketing Agents. All rights reserved.                             
     </footer>
 <script>
-    let slideIndex = 0;
-    showSlides();
+   let index = 0; // Current slide
+const slides = document.querySelectorAll(".slide");
 
-    function showSlides() {
-        let slides = document.querySelectorAll(".slides");
-        slides.forEach(slide => slide.style.display = "none");
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 3000); // Change image every 3 seconds
-    }
+function showSlide(n) {
+  slides.forEach((slide, i) => {
+    slide.style.display = i === n ? "block" : "none";
+  });
+}
 
-    function changeSlide(n) {
-        slideIndex += n - 1;
-        let slides = document.querySelectorAll(".slides");
-        slides.forEach(slide => slide.style.display = "none");
-        if (slideIndex >= slides.length) { slideIndex = 0 }
-        if (slideIndex < 0) { slideIndex = slides.length - 1 }
-        slides[slideIndex].style.display = "block";
-    }
+// Next/previous controls
+function changeSlides(n) {
+  index += n;
+  if (index >= slides.length) index = 0;
+  if (index < 0) index = slides.length - 1;
+  showSlide(index);
+}
+
+// Initial display
+showSlide(index);
 </script>
 
 </body>
