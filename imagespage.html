@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphikos Marketing Agents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: orange;
+         
+        }
+        header {
+            background-color: green;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;        
+            background-image: url("logo1.png");
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            padding: 20px;
+        }
+        .services, .products, .portfolio, .contact, .quotation {
+            margin-bottom: 40px;
+             text-align: center;
+        }
+    
+        
+        .social-media a {
+            margin: 0 10px;
+            color: Blue;
+            text-decoration: none;
+        }
+        .quotation a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #555;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            item-align: center;
+        }
+        .quotation a:hover {
+            background-color: #666;
+        }
+
+        #servicesz {
+    text-align: center;
+    background-color: #C68B59;
+    color: #000;
+     background-image: url("");
+}
+
+.servicez h2 {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.servicesz-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.servicez {
+    flex: 0 0 26%;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.servicez h3 {
+    color: #333;
+}
+.servicez:hover {
+            transform: scale(1.05);
+        }
+
+.servicez p {
+    color: black;
+
+}
+
+
+    #contact {
+    text-align: center;
+    padding: 40px 0;
+    background-image: url('A1.jpg');
+   
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #555;
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+    color: #fff;
+    padding: 0;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+         @media only screen and (max-width: 600px) {
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+          .container, .product-info, .services-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Graphikos Marketing Agents</h1>
+    
+    <h2>Specializing in Digital Printing and Photography</h2>
+</header>
+
+<nav>
+    <a href="#services">Services</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact">Quotation</a>
+</nav>
+
+
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <nav>
+    <marquee>
+            <a>Vehicle Branding</a>
+            <a>Steel Signs</a>
+            <a>Banners</a>
+            <a>Billboards</a>
+            <a>Shop Front Signage</a>
+            <a>Photography - Photoshoots</a>
+    </marquee>
+        </nav>
+ <section id="servicesz">
+        <h2>Services</h2></section>
+    <section id="servicesz" class="servicesz-container">
+    
+        <div class="servicez">
+            <h3>DIGITAL PRINTING</h3>
+            <p>Unleash the power power of Digital Printing - vibrant colours, crisp text, and versatile paper
+options for all your printing needs. Elevate your brand with our cutting edge digital printing,
+fast, affordable, and tailored to your needs.. .</p>
+        </div>
+    
+        <div class="servicez">
+            <h3>LITHO PRINTING</h3>
+            <p>Whether you have your own design or not, you deserve the best of quality for your posters,
+liers or calendars. We deliver affordable high quality prints for any size or type of paper.
+Our charges range from Design charge(excluded if you have your own), Paper purchase,
+Litho plate purchase as well as the printing fee all sumed up to the prices that we have
+displayed. .</p>
+        </div>
+    
+        <div class="servicez">
+            <h3>INVOICE, QUOTATION BOOKS, etc</h3>
+            <p>We do Financial Record Books for a lot of businesses and yours can be one of them.
+From Invoice books to Receipt books, we can print any kind of book you would like to be
+made for you. We do Invoice book designs and print them in both
+one or full colour on Self Absorbing paper.</p>
+        </div>
+         <div class="servicez">
+            <h3>VIDEO MARKETING</h3>
+            <p>Tell your story in a vivid detail when you
+communicate with your potential clients using
+visual communication.
+As GMA, we shoot the video, edit
+and combine it with creative voice
+overs based on your scripting just so as to
+engage with your audience visually.</p>
+        </div>
+    </section>
+        
+    </section>
+
+     <section id="contact">
+        <h2>Contact Us Today</h2>
+        <p>For any inquiries or to place an order, please feel free to contact us at Graphikos Marketing Agents . We are dedicated to providing top-quality Digital and print supplies to businesses and individuals. Let us help you find the right products for your needs. Reach out to us today and discover how we can support your projects and operations.</p>
+    
+        <div class="contact-form">
+            <h3>Send us an Email</h3>
+            <form action="#" method="post" id="emailForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    
+                <button type="submit">Send Email</button>
+            </form>
+        </div>
+    </section>
+  
+<footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+            <a href="https://www.tiktok.com/@graphikosmarketin?_t=8pUWBgbR3jR&_r=1"> TikTok </a>
+            <a href="https://www.instagram.com/graphikosma263?igsh=Yzg1Z2RtcGQxMWM2"> Instagram </a>
+            <a href="https://www.facebook.com/graphikosma263?mibextid=ZbWKwL"> Facebook </a>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contact Details</h3>
+                <p>Graphikos Marketing Agents<br>
+                    Office 31, First Floor, Bhello City Mall<br>
+                    Cnr J.Nyerere and R.Manyika<br>
+                    HARARE<br>
+                   </p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Downloadable Documents</h3>
+                <ul>
+                    <li><a href="ITF.pdf" target="_blank">Tax Clearance Form</a></li>
+                    <li><a href="BANKINGDETAILS.pdf" target="_blank">Banking Details</Details></a></li>
+                    <p>Phone HRE: +263788617363</p>
+                    <!-- Add more downloadable documents as needed -->
+                </ul>
+            </div>
+    
+           <div class="footer-section">
+                <h3>WhatsApp</h3>
+                <p>Contact Mr K Chikara on WhatsApp:</p>
+                <a href="https://wa.me/263788617363" target="_blank" class="whatsapp-button">Message Now</a>
+            </div>
+        </div>
+    
+    
+    
+        &copy; 2024 Graphikos Marketing Agents. All rights reserved.                             
+    </footer>
+<script>
+   let index = 0; // Current slide
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(n) {
+  slides.forEach((slide, i) => {
+    slide.style.display = i === n ? "block" : "none";
+  });
+}
+
+// Next/previous controls
+function changeSlides(n) {
+  index += n;
+  if (index >= slides.length) index = 0;
+  if (index < 0) index = slides.length - 1;
+  showSlide(index);
+}
+
+// Initial display
+showSlide(index);
+</script>
+
+</body>
+</html>
